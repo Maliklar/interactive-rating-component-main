@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+:root {
+    --primary: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+* {
+    font-family: 'Dosis', sans-serif;
+    box-sizing: border-box;
+    word-spacing: 4px;
+}
+
+body {
+    background-color: black;
+    color: var(--white);
+}
+
+.modal {
+    background-color: var(--veryDarkBlue);
+    width: 420px;
+    height: 420px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -210px;
+    margin-top: -210px;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+h1,
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.rounded-container {
+    background-color: var(--darkBlue);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: var(--lightGrey);
+    font-size: 15px;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-text {
+    color: var(--lightGrey);
+}
+
+.submission-btn {
+    background-color: var(--primary);
+    width: 100%;
+    border-radius: 50px;
+    padding: 15px;
+    border: none;
+    color: var(--white);
+    letter-spacing: 3px;
+}
+
+.submission-btn:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.rating-container>div:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.thanks-icon {
+    width: 180px;
+}
+
+#thanks-modal {
+    align-items: center;
+    display: none;
+    text-align: center;
+}
+
+.rating-result-container {
+    background-color: var(--darkBlue);
+    color: var(--primary);
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+.rounded-containe,
+.active {
+    background-color: var(--lightGrey);
+    color: var(--white);
+}
+
+@media screen and (max-width: 400px) {
+    .modal {
+        background-color: var(--veryDarkBlue);
+        width: 320px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -160px;
+        padding: 30px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-around;
+    }
+    .rounded-container {
+        background-color: var(--darkBlue);
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        color: var(--lightGrey);
+        font-size: 15px;
+    }
+    p {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: x-large;
+    }
+}
